@@ -1,15 +1,10 @@
-const http = require('http');
+// app.js
+// A simple function to greet a user
+function greetUser(name) {
+    return `Hello, ${name}! Welcome to the GitHub repository.`;
+}
 
-// A simple demonstration of a basic Node.js server
+// Example usage
+console.log(greetUser("Developer"));
 
-
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello, World!\n');
-});
-
-const PORT = 3000;
-server.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}/`);
-});
+module.exports = greetUser;
